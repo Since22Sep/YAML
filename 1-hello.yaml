@@ -1,0 +1,36 @@
+# This is a key value pairs
+
+"apple": "I am a red fruit"
+20 : "This is my roll number"
+---
+
+# YAML is case sensitive
+
+#Lists:-
+
+- Twilio
+- RedHat
+- Kubernetes
+- Docker
+--- 
+
+# Block Styles:-
+# Space is very important in YAML files
+# Indentation is also important in YAML files
+
+states:
+- Bihar
+- Delhi
+- Gujarat
+---
+
+# Storing data in single lines 
+
+Algorithms: [Kadane's,Dijiktra's]
+---
+
+# Storing data in a single line
+
+{name: "Dipanshu" , roll: 20}
+
+...
