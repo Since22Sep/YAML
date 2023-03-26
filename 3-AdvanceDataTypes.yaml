@@ -1,0 +1,85 @@
+student: !!seq
+- marks
+- name 
+- roll_no
+
+#like this also
+cities:[new delhi, mumbai]
+
+#some of the keys of the seq will be empty known as sparse seq
+
+sparse seq:
+-hey
+-how
+-
+- NULL
+- sup
+
+# nested sequences:- sometimes you need to represent sub-items of the list
+
+-
+ - mango
+ - apple
+ - banana
+-
+ - marks
+ - roll num
+ - date
+
+# key value pairs are called maps
+!!map
+
+# nested mappings : map within a map
+
+name: Dipanshu Kumar
+role: 
+ age: 21
+ job: student
+
+# same as
+name: Dipanshu Kumar
+role: {age: 21, job: student}
+
+# pairs: keys may have duplicate value
+# !!pairs
+
+pair example: !!pairs
+- job: student
+- job: teacher
+
+# same as
+pair example: !!pairs [job: student, job: teacher]
+
+#this will be an array of hashtables
+
+#!! set will allow you to have unique values
+names: !!set
+? dipanshu
+? rithik
+
+#dictionary !!omap
+people: !!omap
+  - Dipanshu:
+      name: Dipanshu Kumar
+      age: 
+
+  - Rithik:
+      name: Rithik
+      age: 21
+
+
+# Reusing some properties using anchors
+# anchors basically means what do you want to copy and where do you want to copy
+
+linkings: &likes
+  fav fruit: mango
+  dislikes: grapes
+
+person1:
+  name: Dipanshu Kumar
+  <<: *likes
+
+person2: 
+  name: Rithik
+  <<: *likes
+  dislikes: berries
